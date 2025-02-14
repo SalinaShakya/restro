@@ -2,22 +2,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './sign.css';
-const Signup=(props) =>{
-    const [fullName, setFullName] =useState('');
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [rePassword, setRePassword] =useState('');
-    const [error,setError] =useState('');
-  
-    const handleLogin = async (e) => {
-      e.preventDefault();
-      if (password !== rePassword) {
-        setError('Passwords do not match');
-        return;
+const Signup = (props) => {
+  const [fullName, setFullName] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [rePassword, setRePassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (password !== rePassword) {
+      setError('Passwords do not match');
+      return;
     }
 
-     
-  
+
+
     return (
       <main className='web-container'>
         <div className="signup-container">
@@ -57,10 +57,10 @@ const Signup=(props) =>{
               </form>
             </div>
           </div>
-  
+
         </div>
       </main>
     );
-}
+  }
 }
 export default Signup
